@@ -205,3 +205,23 @@ const checkSum = (num1, num2) => {
 };
 
 console.log(checkSum(12, 90));
+//**論理演算子の本当の意味をしろう */
+// const flag1 = true;
+// const flag2 = true;
+
+// if (flag1 || flag2) {
+//   console.log("1か2はtrueになります");
+// }
+
+// if (flag1 && flag2) {
+//   console.log("1も2もtrueになります");
+// }
+//|| は左側がfalseなら右側を返す
+//左側がtrueなら左側を返す
+// const num = 100;
+// const fee = num || "金額は未設定です";
+// console.log(fee);
+//&&の左側がtrueなら右側を返す
+const num2 = null;
+const fee2 = num2 && "何か設定されました";
+console.log(fee2);
