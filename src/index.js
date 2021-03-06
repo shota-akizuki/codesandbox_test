@@ -151,12 +151,41 @@
 // console.log(arr3);
 
 //配列のコピー、結合
-const arr4 = [10, 20];
-const arr5 = [30, 40];
-const arr6 = [...arr4];
-//以下のように参照を渡す書き方はなるべくしない
-//arr6に要素を追加するとarr4も書き換わってしまう
-// const arr6 = arr4;
-console.log(arr6);
-const arr7 = [...arr4, ...arr5];
-console.log(arr7);
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
+// const arr6 = [...arr4];
+// //以下のように参照を渡す書き方はなるべくしない
+// //arr6に要素を追加するとarr4も書き換わってしま う
+// // const arr6 = arr4;
+// console.log(arr6);
+// const arr7 = [...arr4, ...arr5];
+// console.log(arr7);
+
+// //**mapやfilterを使った配列の処理 */
+const nameArr = ["田中", "山田", "じゃけぇ"];
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(`${index + 1}番目は${nameArr[index]}です`);
+// }
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// });
+// console.log(nameArr2);
+
+// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
+
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+//   return num % 2 === 0;
+// });
+
+// console.log(newNumArr);
+
+const newNameArr = nameArr.map((name) => {
+  if (name === "じゃけぇ") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+
+console.log(newNameArr);
